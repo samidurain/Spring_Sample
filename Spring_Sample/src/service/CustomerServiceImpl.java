@@ -6,7 +6,12 @@ import model.Customer;
 import repository.CustomerRepository;
 import repository.CustomerRepositoryImpl;
 
-public class CustomerServiceImpl implements CustomerRepository {
+/**
+ * 
+ * @author Samidurai.Nadarajan
+ *
+ */
+public class CustomerServiceImpl implements CustomerService {
 	private CustomerRepository custRepo = new CustomerRepositoryImpl();
 
 	@Override

@@ -10,7 +10,7 @@ import model.Customer;
  * @author Samidurai.Nadarajan
  *
  */
-public class CustomerRepositoryImpl implements CustomerRepository {
+public class HibernateCustomerRepositoryImpl implements CustomerRepository {
 
 	@Override
 	public List<Customer> findAll() {

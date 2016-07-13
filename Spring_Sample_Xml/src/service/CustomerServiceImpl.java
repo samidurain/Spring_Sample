@@ -4,7 +4,6 @@ import java.util.List;
 
 import model.Customer;
 import repository.CustomerRepository;
-import repository.CustomerRepositoryImpl;
 
 /**
  * 
@@ -12,11 +11,29 @@ import repository.CustomerRepositoryImpl;
  *
  */
 public class CustomerServiceImpl implements CustomerService {
-	private CustomerRepository custRepo = new CustomerRepositoryImpl();
+	private CustomerRepository customerRepository;
+
+	CustomerServiceImpl() {
+
+	}
+
+	public CustomerServiceImpl(CustomerRepository customerRepository) {
+		System.out.println("Setting constructor argument");
+		this.customerRepository = customerRepository;
+	}
+
+	public CustomerRepository getCustomerRepository() {
+		return customerRepository;
+	}
+
+	public void setCustomerRepository(CustomerRepository customerRepository) {
+		System.out.println("Setting through set method");
+		this.customerRepository = customerRepository;
+	}
 
 	@Override
 	public List<Customer> findAll() {
-		return custRepo.findAll();
+		return customerRepository.findAll();
 	}
 
 }

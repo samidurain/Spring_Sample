@@ -1,5 +1,10 @@
 package model;
 
+/**
+ * 
+ * @author Samidurai.Nadarajan
+ *
+ */
 public class Customer {
 	private String firstName;
 	private String lastName;
@@ -24,4 +29,10 @@ public class Customer {
 		this.lastName = lastName;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("First Name: ").append(firstName).append("Last Name: ").append(lastName);
+		return sb.toString();
+	}
 }
